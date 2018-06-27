@@ -1,0 +1,30 @@
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensionsTest.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensionsTest.pdb
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensions.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensions.pdb
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.csproj.CoreCompileInputs.cache
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.dll
+C:\Users\Саша\Desktop\C#\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.pdb
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensionsTest.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensionsTest.pdb
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensions.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\ArrayExtensions.pdb
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.csproj.CoreCompileInputs.cache
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.dll
+C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensionsTest\obj\Debug\ArrayExtensionsTest.pdb
