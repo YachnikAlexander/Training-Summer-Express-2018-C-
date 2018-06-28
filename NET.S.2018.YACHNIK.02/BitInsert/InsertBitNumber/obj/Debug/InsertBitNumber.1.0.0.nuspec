@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>InsertBitNumber</id>
+    <version>1.0.0</version>
+    <authors>InsertBitNumber</authors>
+    <owners>InsertBitNumber</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\bin\Debug\netstandard2.0\InsertBitNumber.dll" target="lib\netstandard2.0\InsertBitNumber.dll" />
+  </files>
+</package>
