@@ -5,126 +5,64 @@ namespace ArraySorting
     /// <summary>
     /// class Sort
     /// </summary>
-    public class Sort
+    public static class Sort
     {
+        #region public API
         /// <summary>
-        /// static method for sort array with 3 arguments
+        /// static extending method for sort array with 3 arguments
         /// </summary>
         /// <param name="unsortedArray">array needed to sort</param>
         /// <param name="leftIndex">index from which start sort</param>
         /// <param name="rightIndex">index to which sort</param>
-        /// <returns>sorted array</returns>
-        public static int[] MergeSort(int[] unsortedArray, int leftIndex, int rightIndex)
+        public static void MergeSort(this int[] unsortedArray, int leftIndex, int rightIndex)
         {
-            if (unsortedArray == null)
-            {
-                throw new ArgumentNullException($"Array {0} is null ", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 0)
-            {
-                throw new ArgumentException($"The length of {0} 0", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 1)
-            {
-                return unsortedArray;
-            }
-            else
-            {
-                StartMergeSort(unsortedArray, leftIndex, rightIndex);
-                return unsortedArray;
-            }
+            IsValid(unsortedArray, leftIndex, rightIndex);
+            StartMergeSort(unsortedArray, leftIndex, rightIndex);
         }
 
         /// <summary>
-        /// overloaded method with 1 argument for sort whole array
+        /// extending overloaded method with 1 argument for sort whole array
         /// </summary>
         /// <param name="unsortedArray">array needed to sort</param>
         /// <returns>sorted array</returns>
-        public static int[] MergeSort(int[] unsortedArray)
+        public static void MergeSort(this int[] unsortedArray)
         {
-            if (unsortedArray == null)
-            {
-                throw new ArgumentNullException($"array {0} is null", nameof(unsortedArray));
-            }
+            IsValid(unsortedArray);
 
-            if (unsortedArray.Length == 0)
-            {
-                throw new ArgumentException($"The length of {0} 0", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 1)
-            {
-                return unsortedArray;
-            }
-            else
-            {
-                int lenght = unsortedArray.Length;
-                StartMergeSort(unsortedArray, 0, lenght - 1);
-                return unsortedArray;
-            }
+            int lenght = unsortedArray.Length;
+            StartMergeSort(unsortedArray, 0, lenght - 1);
+            
         }
 
         /// <summary>
-        /// static method for sort array with 3 arguments
+        /// extending static method for sort array with 3 arguments
         /// </summary>
         /// <param name="unsortedArray">array needed to sort</param>
         /// <param name="start">index from which start sort</param>
         /// <param name="end">index to which sort</param>
         /// <returns>sorted array</returns>
-        public static int[] QuickSort(int[] unsortedArray, int start, int end)
+        public static void QuickSort(this int[] unsortedArray, int start, int end)
         {
-            if (unsortedArray == null)
-            {
-                throw new ArgumentNullException($"array {0} is null", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 0)
-            {
-                throw new ArgumentException($"The length of {0} 0", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 1)
-            {
-                return unsortedArray;
-            }
-            else
-            {
-                StartQuickSort(unsortedArray, start, end);
-                return unsortedArray;
-            }
+            IsValid(unsortedArray, start, end);
+            StartQuickSort(unsortedArray, start, end);
+            
         }
 
         /// <summary>
-        /// static method for sort array with 1 arguments
+        /// extending static method for sort array with 1 arguments
         /// </summary>
         /// <param name="unsortedArray">array needed to sort</param>
         /// <returns>sorted array</returns>
-        public static int[] QuickSort(int[] unsortedArray)
+        public static void QuickSort(this int[] unsortedArray)
         {
-            if (unsortedArray == null)
-            {
-                throw new ArgumentNullException($"array {0} is null", nameof(unsortedArray));
-            }
+            IsValid(unsortedArray);
 
-            if (unsortedArray.Length == 0)
-            {
-                throw new ArgumentException($"The length of {0} 0", nameof(unsortedArray));
-            }
-
-            if (unsortedArray.Length == 1)
-            {
-                return unsortedArray;
-            }
-            else
-            {
-                int length = unsortedArray.Length;
-                StartQuickSort(unsortedArray, 0, length - 1);
-                return unsortedArray;
-            }
+            int length = unsortedArray.Length;
+            StartQuickSort(unsortedArray, 0, length - 1);
         }
+        #endregion
 
+        #region privateMergeSort
         /// <summary>
         /// start method of merge sort
         /// </summary>
@@ -199,7 +137,9 @@ namespace ArraySorting
                 }
             }
         }
+        #endregion
 
+        #region privateQuickSort
         /// <summary>
         /// method for finding partition of array
         /// </summary>
@@ -263,6 +203,34 @@ namespace ArraySorting
                     StartQuickSort(unsortedArray, pivot + 1, end);
                 }
             }
+        }
+        #endregion
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="unsortedArray"></param>
+        /// <param name="leftIndex"></param>
+        /// <param name="rightIndex"></param>
+        /// <returns></returns>
+        private static bool IsValid(int[] unsortedArray, int leftIndex = 0, int rightIndex = 1)
+        {
+            if (unsortedArray == null)
+            {
+                throw new ArgumentNullException($"Array {0} is null ", nameof(unsortedArray));
+            }
+
+            if (unsortedArray.Length == 0)
+            {
+                throw new ArgumentException($"The length of {0} 0", nameof(unsortedArray));
+            }
+
+            if (unsortedArray.Length == 1)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

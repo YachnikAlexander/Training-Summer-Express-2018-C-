@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExtensions", "ArrayExt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExtensionsTest", "ArrayExtensionsTest\ArrayExtensionsTest.csproj", "{2C2858A8-911C-463D-83AC-3BB459CD219A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExtension.nUnit.Test", "UnitTestProject1\ArrayExtension.nUnit.Test.csproj", "{EF317B6D-ABF6-4E0F-B187-67BF34AEC606}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C2858A8-911C-463D-83AC-3BB459CD219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C2858A8-911C-463D-83AC-3BB459CD219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C2858A8-911C-463D-83AC-3BB459CD219A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF317B6D-ABF6-4E0F-B187-67BF34AEC606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF317B6D-ABF6-4E0F-B187-67BF34AEC606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF317B6D-ABF6-4E0F-B187-67BF34AEC606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF317B6D-ABF6-4E0F-B187-67BF34AEC606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

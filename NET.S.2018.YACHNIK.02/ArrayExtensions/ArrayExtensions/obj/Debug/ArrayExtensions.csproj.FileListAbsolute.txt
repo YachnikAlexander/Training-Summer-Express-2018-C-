@@ -10,3 +10,9 @@ C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensions\obj
 C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.csproj.CoreCompileInputs.cache
 C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.dll
 C:\Users\Саша\Desktop\C#\C# forBeginners\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.pdb
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\bin\Debug\ArrayExtensions.dll
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\bin\Debug\ArrayExtensions.pdb
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.csproj.CoreCompileInputs.cache
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.dll
+C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\ArrayExtensions\ArrayExtensions\obj\Debug\ArrayExtensions.pdb

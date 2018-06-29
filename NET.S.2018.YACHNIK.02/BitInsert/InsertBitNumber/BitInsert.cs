@@ -7,6 +7,7 @@ namespace InsertBitNumber
     /// </summary>
     public class BitInsert
     {
+        private const int MAXBIT = 31;
         /// <summary>
         /// public method for call InsertNumber
         /// </summary>
@@ -19,7 +20,7 @@ namespace InsertBitNumber
         /// <exception cref="ArgumentException">the exception flies when The argument j is more than i</exception>
         public static int InsertNumber(int firstNumber, int secondNumber, int i, int j)
         {
-            if (i < 0 || j > 31)
+            if (i < 0 || j > MAXBIT)
             {
                 throw new ArgumentOutOfRangeException($"The arguments {0} or {1} are out of (0,31)", nameof(i), nameof(j));
             }

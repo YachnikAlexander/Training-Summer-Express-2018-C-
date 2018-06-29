@@ -23,9 +23,63 @@ namespace ArrayExtensionsTest
             int[] array = new int[] { 1, 2, 77, 7, 701 };
             int digit = 7;
 
-            List<int> expected = new List<int>() { 77, 7, 701 };
+            int[] expected = new int[] { 77, 7, 701 };
 
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// This method only for check time execution
+        /// </summary>
+        [TestMethod]
+        public void RandomPositivNumbersArrayTest()
+        {
+            Random rnd = new Random();
+            int[] array = new int[1000000];
+            for(int i=0; i<array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+            int digit = 7;
+
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+
+            int[] expected = actual;
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ArrayTestByString()
+        {
+            int[] array = new int[] { 1, 2, 77, 7, 701 };
+            int digit = 7;
+
+            int[] expected = new int[] { 77, 7, 701 };
+
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit, "byString");
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// This method only for check time execution
+        /// </summary>
+        [TestMethod]
+        public void RandomArrayTestByString()
+        {
+            Random rnd = new Random();
+            int[] array = new int[1000000];
+            for(int i=0; i<array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+            int digit = 7;
+
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit, "byString");
+            int[] expected = actual;
 
             CollectionAssert.AreEqual(expected, actual);
         }
@@ -38,8 +92,8 @@ namespace ArrayExtensionsTest
         {
             int[] array = new int[] { 1, 2, 3, 4, 5, 6, -7, 68, 69, 70, 15, -17 };
             int digit = 7;
-            List<int> expected = new List<int>() { -7, 70, -17 };
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] expected = new int[] { -7, 70, -17 };
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
             CollectionAssert.AreEqual(expected, actual);
         }
 
@@ -52,7 +106,7 @@ namespace ArrayExtensionsTest
         {
             int[] array = new int[] { 1, 2, 3, 4, 5, 6, -7, 68, 69, 70, 15, -17 };
             int digit = -7;
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
         }
 
         /// <summary>
@@ -64,7 +118,7 @@ namespace ArrayExtensionsTest
         {
             int[] array = new int[] { };
             int digit = 7;
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
         }
 
         /// <summary>
@@ -76,7 +130,25 @@ namespace ArrayExtensionsTest
         {
             int[] array = null;
             int digit = 7;
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void ArrayNullTestByString()
+        {
+            int[] array = null;
+            int digit = 7;
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit,"byString");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void FilterNumbersNotValidMethod()
+        {
+            int[] array = new int[] {1,4,78,4324};
+            int digit = 7;
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit, "BByString");
         }
 
         /// <summary>
@@ -87,8 +159,8 @@ namespace ArrayExtensionsTest
         {
             int[] array = new int[] { 0, 10, 20, 111, 456 };
             int digit = 0;
-            List<int> expected = new List<int>() { 0, 10, 20 };
-            List<int> actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
+            int[] expected = new int[] { 0, 10, 20 };
+            int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
             CollectionAssert.AreEqual(expected, actual);
         }
     }

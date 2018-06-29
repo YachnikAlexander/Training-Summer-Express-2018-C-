@@ -15,15 +15,20 @@ namespace ArraySortingTest
         [TestMethod]
         public void MergeSortOverloadedTest()
         {
-            ////Aranged Act Assert (AAA) Pattern
+            Random rnd = new Random();
+            int[] array = new int[500];
+            
+            for(int i=0; i<array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
 
-            ////Arrange
-            int[] array = new int[] { 1, 2, 77, 7, 701 };
-            int[] expected = new int[] { 1, 2, 7, 77, 701 };
-            ////Act
-            int[] actual = ArraySorting.Sort.MergeSort(array);
-            ////Asset
-            CollectionAssert.AreEqual(expected, actual);
+            ArraySorting.Sort.MergeSort(array);
+
+            if (!IsSortedArray(array))
+            {
+                Assert.Fail();
+            }
         }
 
         /// <summary>
@@ -32,15 +37,20 @@ namespace ArraySortingTest
         [TestMethod]
         public void MergeSortTest()
         {
-            ////Aranged Act Assert (AAA) Pattern
+            Random rnd = new Random();
+            int[] array = new int[500];
 
-            ////Arrange
-            int[] array = new int[] { 1, 77, 2, 7, 701 };
-            int[] expected = new int[] { 1, 2, 77, 7, 701 };
-            ////Act
-            int[] actual = ArraySorting.Sort.MergeSort(array, 0, 2);
-            ////Asset
-            CollectionAssert.AreEqual(expected, actual);
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+
+            ArraySorting.Sort.MergeSort(array, 30, 80);
+
+            if (!IsSortedArray(array, 30, 80))
+            {
+                Assert.Fail();
+            }
         }
 
         /// <summary>
@@ -51,7 +61,7 @@ namespace ArraySortingTest
         public void EmptyArrayMergeTest()
         {
             int[] array = new int[] { };
-            int[] actual = ArraySorting.Sort.MergeSort(array);
+            ArraySorting.Sort.MergeSort(array);
         }
 
         /// <summary>
@@ -62,7 +72,7 @@ namespace ArraySortingTest
         public void NullArrayMergeTest()
         {
             int[] array = null;
-            int[] actual = ArraySorting.Sort.MergeSort(array);
+            ArraySorting.Sort.MergeSort(array);
         }
 
         /// <summary>
@@ -71,14 +81,20 @@ namespace ArraySortingTest
         [TestMethod]
         public void QuickSortOverloadedTest()
         {
-            ////Aranged Act Assert (AAA) Pattern
-            ////Arrange
-            int[] array = new int[] { 1, 2, 77, 7, 701 };
-            int[] expected = new int[] { 1, 2, 7, 77, 701 };
-            ////Act
-            int[] actual = ArraySorting.Sort.QuickSort(array);
-            ////Asset
-            CollectionAssert.AreEqual(expected, actual);
+            Random rnd = new Random();
+            int[] array = new int[500];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+
+            ArraySorting.Sort.QuickSort(array);
+
+            if (!IsSortedArray(array))
+            {
+                Assert.Fail();
+            }
         }
 
         /// <summary>
@@ -87,15 +103,20 @@ namespace ArraySortingTest
         [TestMethod]
         public void QuickSortTest()
         {
-            ////Aranged Act Assert (AAA) Pattern
+            Random rnd = new Random();
+            int[] array = new int[500];
 
-            ////Arrange
-            int[] array = new int[] { 1, 77, 2, 7, 701 };
-            int[] expected = new int[] { 1, 2, 77, 7, 701 };
-            ////Act
-            int[] actual = ArraySorting.Sort.QuickSort(array, 0, 2);
-            ////Asset
-            CollectionAssert.AreEqual(expected, actual);
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next();
+            }
+
+            ArraySorting.Sort.QuickSort(array, 30, 80);
+
+            if (!IsSortedArray(array, 30, 80))
+            {
+                Assert.Fail();
+            }
         }
 
         /// <summary>
@@ -106,7 +127,7 @@ namespace ArraySortingTest
         public void EmptyArrayQuickTest()
         {
             int[] array = new int[] { };
-            int[] actual = ArraySorting.Sort.QuickSort(array);
+            ArraySorting.Sort.QuickSort(array);
         }
 
         /// <summary>
@@ -117,7 +138,24 @@ namespace ArraySortingTest
         public void NullArrayQuickTest()
         {
             int[] array = null;
-            int[] actual = ArraySorting.Sort.QuickSort(array);
+            ArraySorting.Sort.QuickSort(array);
         }
+
+        public static bool IsSortedArray(int[] array, int from = 0, int to = -1) {
+            if(to == -1)
+            {
+                to = array.Length;
+            }
+
+            for(int i=from; i<to - 1; i++)
+            {
+                if (array[i] > array[i + 1])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 }

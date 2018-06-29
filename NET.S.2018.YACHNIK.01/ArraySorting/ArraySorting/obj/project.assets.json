@@ -186,11 +186,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Саша\\source\\repos\\ArraySorting\\ArraySorting\\ArraySorting.csproj",
+      "projectUniqueName": "C:\\Users\\Саша\\Desktop\\Training-Summer-Express-2018-C-\\NET.S.2018.YACHNIK.01\\ArraySorting\\ArraySorting\\ArraySorting.csproj",
       "projectName": "ArraySorting",
-      "projectPath": "C:\\Users\\Саша\\source\\repos\\ArraySorting\\ArraySorting\\ArraySorting.csproj",
+      "projectPath": "C:\\Users\\Саша\\Desktop\\Training-Summer-Express-2018-C-\\NET.S.2018.YACHNIK.01\\ArraySorting\\ArraySorting\\ArraySorting.csproj",
       "packagesPath": "C:\\Users\\Саша\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Саша\\source\\repos\\ArraySorting\\ArraySorting\\obj\\",
+      "outputPath": "C:\\Users\\Саша\\Desktop\\Training-Summer-Express-2018-C-\\NET.S.2018.YACHNIK.01\\ArraySorting\\ArraySorting\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

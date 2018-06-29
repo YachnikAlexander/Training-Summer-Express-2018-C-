@@ -35,13 +35,55 @@ namespace BitInsert.Test
         }
 
         [TestMethod]
-        public void BitInsertRange3to8()
+        public void BitInsertRangeThirdTest()
+        {
+            int firstNumber = 12;
+            int secondNumber = 14;
+            int extend = 60;
+            int i = 2;
+            int j = 8;
+
+            int actual = InsertBitNumber.BitInsert.InsertNumber(firstNumber, secondNumber, i, j);
+
+            Assert.AreEqual(extend, actual);
+        }
+
+        [TestMethod]
+        public void BitInsertRangeForthTest()
         {
             int firstNumber = 8;
             int secondNumber = 15;
             int extend = 120;
             int i = 3;
             int j = 8;
+
+            int actual = InsertBitNumber.BitInsert.InsertNumber(firstNumber, secondNumber, i, j);
+
+            Assert.AreEqual(extend, actual);
+        }
+
+        [TestMethod]
+        public void BitInsertRangeFifthTest()
+        {
+            int firstNumber = 100;
+            int secondNumber = 73;
+            int extend = 299008;
+            int i = 12;
+            int j = 26;
+
+            int actual = InsertBitNumber.BitInsert.InsertNumber(firstNumber, secondNumber, i, j);
+
+            Assert.AreEqual(extend, actual);
+        }
+
+        [TestMethod]
+        public void BitInsertRangeSixsTest()
+        {
+            int firstNumber = 34;
+            int secondNumber = 22;
+            int extend = 5632;
+            int i = 8;
+            int j = 13;
 
             int actual = InsertBitNumber.BitInsert.InsertNumber(firstNumber, secondNumber, i, j);
 
