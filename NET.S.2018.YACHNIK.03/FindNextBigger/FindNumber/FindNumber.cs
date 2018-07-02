@@ -63,24 +63,25 @@ namespace FindNumber
         private static int StartFindBiggerNumber(int number)
         {
             int[] arraySplitNumber = SplitNumber(number);
-
-            int reverseIndex = FindElementsToSwap(ref arraySplitNumber);
-            int index = arraySplitNumber.Length - reverseIndex - 1;
-
-            if (index > 0)
+            int reverseIndex = FindElementsToSwap(arraySplitNumber);
+            if (reverseIndex > 0)
             {
-                ArraySorting.Sort.MergeSort(arraySplitNumber, index, arraySplitNumber.Length - 1);
-            }
+                Swap(ref arraySplitNumber[reverseIndex], ref arraySplitNumber[reverseIndex - 1]);
 
-            int finalNumber = FormingBiggerNumber(arraySplitNumber);
+                int index = arraySplitNumber.Length - reverseIndex - 1;
 
-            if (finalNumber == number)
-            {
-                return -1;
+                if (index > 0)
+                {
+                    ArraySorting.Sort.MergeSort(arraySplitNumber, index, arraySplitNumber.Length - 1);
+                }
+
+                int finalNumber = FormingBiggerNumber(arraySplitNumber);
+
+                return finalNumber;
             }
             else
             {
-                return finalNumber;
+                return -1;
             }
         }
 
@@ -89,14 +90,14 @@ namespace FindNumber
         /// </summary>
         /// <param name="splitArray">array consist of splitting digits of numbers</param>
         /// <returns>index of first swapping elements or -1 if this index isnt exist</returns>
-        private static int FindElementsToSwap(ref int[] splitArray)
+        private static int FindElementsToSwap(int[] splitArray)
         {
             int index = -1;
             for (int i = splitArray.Length - 1; i > 0; i--)
             {
                 if (splitArray[i] > splitArray[i - 1])
                 {
-                    Swap(ref splitArray[i], ref splitArray[i - 1]);
+                    //Swap(ref splitArray[i], ref splitArray[i - 1]);
                     index = i;
                     break;
                 }
