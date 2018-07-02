@@ -230,6 +230,11 @@ namespace ArraySorting
                 return false;
             }
 
+            if(leftIndex > rightIndex)
+            {
+                throw new ArgumentException($"The {0} is invalid", nameof(leftIndex));
+            }
+
             return true;
         }
     }

@@ -141,6 +141,14 @@ namespace ArraySortingTest
             ArraySorting.Sort.QuickSort(array);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ArrayTestleftMoreThanRight()
+        {
+            int[] array = new[]{1, 2};
+            ArraySorting.Sort.QuickSort(array, 2, 1);
+        }
+
         public static bool IsSortedArray(int[] array, int from = 0, int to = -1) {
             if(to == -1)
             {

@@ -35,37 +35,16 @@ namespace FindingNRoot
         /// <returns>root n-degree's for number</returns>
         private static double StartNewtonNRoot(double number, int degree, double accuracy)
         {
-            double root = ((degree - 1) + number) / degree;
             double num = 1;
+            double root = (1.0 / degree) * ((degree - 1) * num + number / Math.Pow(num, degree - 1));
 
             while (Math.Abs(root - num) > accuracy)
             {
                 num = root;
-                root = (((degree - 1) * num) + (number / Math.Pow(num, degree - 1))) / degree;
+                root = (1.0 / degree) * ((degree - 1) * num + number / Math.Pow(num, degree - 1));
             }
 
-            double one = 1;
-            int counter = 0;
-
-            while (one > accuracy)
-            {
-                one *= 0.1;
-                root *= 10;
-                counter++;
-            }
-
-            if (root < 0)
-            {
-                root /= Pow(10, counter);
-                root = Math.Round(root, counter);
-            }
-            else
-            {
-                root /= Pow(10, counter);
-                root = Math.Round(root, counter - 1);
-            }
-
-            return root;
+            return root; ;
         }
 
         /// <summary>
@@ -101,47 +80,17 @@ namespace FindingNRoot
         {
             if (number < 0 && degree % 2 == 0)
             {
-                throw new ArgumentException($"number {0} less than 0 and degreeeven number", nameof(number));
+                throw new ArgumentOutOfRangeException($"number {0} less than 0 and degree even number", nameof(number));
             }
 
             if (degree < 0)
             {
-                throw new ArgumentException($"degree {0} less than 0", nameof(degree));
+                throw new ArgumentOutOfRangeException($"degree {0} less than 0", nameof(degree));
             }
 
             if (!(accuracy < 1 && accuracy > 0))
             {
-                throw new ArgumentException($"accuracy {0} is invalid", nameof(accuracy));
-            }
-
-            if (!IsValidAccuracy(accuracy))
-            {
-                throw new ArgumentException($"incorect type of {0}", nameof(accuracy));
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        /// method for validate entering accuracy
-        /// </summary>
-        /// <param name="accuracy">accuracy of calculation</param>
-        /// <returns>bool value of accuracy validity</returns>
-        private static bool IsValidAccuracy(double accuracy)
-        {
-            string accuracyStr = accuracy.ToString();
-
-            string[] arrSplit = accuracyStr.Split(',');
-
-            int number;
-            bool flag = Int32.TryParse(arrSplit[1], out number);
-
-            if (flag)
-            {
-                if (number != 1)
-                {
-                    return false;
-                }
+                throw new ArgumentOutOfRangeException($"accuracy {0} is invalid", nameof(accuracy));
             }
 
             return true;

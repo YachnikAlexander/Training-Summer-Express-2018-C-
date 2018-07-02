@@ -14,6 +14,7 @@ namespace ArrayExtensionsTest
     [TestClass]
     public class ArrayExtensionsTest
     {
+
         /// <summary>
         /// Testing valid code for Positiv numbers
         /// </summary>
@@ -162,6 +163,19 @@ namespace ArrayExtensionsTest
             int[] expected = new int[] { 0, 10, 20 };
             int[] actual = ArrayExtensions.ArrayExtensions.FilterNumbers(array, digit);
             CollectionAssert.AreEqual(expected, actual);
+        }
+
+        private static bool IsSortingArray(int[] array)
+        {
+            for(int i = 0; i < array.Length-1; i++)
+            {
+                if (array[i] > array[i + 1])
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

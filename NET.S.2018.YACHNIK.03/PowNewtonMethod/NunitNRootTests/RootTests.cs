@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NunitNRootTests
+namespace NRootTests
 {
     [TestClass]
-    public class NrootTests
+    public class RootTests
     {
         [TestMethod]
         public void FirstTest_1_5_afterDecpoint0001()
@@ -90,7 +90,7 @@ namespace NunitNRootTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test_Minus01_2_afterDecpoint0001_ArgumentException()
         {
             double number = -0.01;
@@ -100,7 +100,7 @@ namespace NunitNRootTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test_afterDecpoint001_Minus2_afterDecpoint0001_argumentException()
         {
             double number = 0.001;
@@ -110,23 +110,13 @@ namespace NunitNRootTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test_afterDecpoint01_2_Minus1_argumentException()
         {
             double number = 0.001;
             int degree = -2;
             double accuracy = 0.0001;
 
-            double actual = FindingNRoot.RootNDegree.NewtonNRoot(number, degree, accuracy);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
-        public void Test_afterDecpoint01_2_afterDecpoint0003_argumentException()
-        {
-            double number = 0.001;
-            int degree = 2;
-            double accuracy = 0.0003;
             double actual = FindingNRoot.RootNDegree.NewtonNRoot(number, degree, accuracy);
         }
     }
