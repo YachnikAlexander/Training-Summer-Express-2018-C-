@@ -8,9 +8,17 @@ namespace PolinomialExtension
 {
     public class Polinomial
     {
+        #region Fields
         private readonly double[] coefs;
         private readonly int degree;
+        #endregion
 
+        #region PublicAPI
+        /// <summary>
+        /// Ctor for initializing polinomial by 2 arguments
+        /// </summary>
+        /// <param name="coefs">array of coefs</param>
+        /// <param name="degree">degree of polinomial</param>
         public Polinomial(double[] coefs, int degree)
         {
             IsValid(coefs, degree);
@@ -18,6 +26,10 @@ namespace PolinomialExtension
             this.degree = degree;
         }
 
+        /// <summary>
+        /// Ctor for initializing polinomial by 1 arguments
+        /// </summary>
+        /// <param name="coefs">array of coefs</param>
         public Polinomial(double[] coefs)
         {
             IsValid(coefs, degree);
@@ -26,6 +38,10 @@ namespace PolinomialExtension
             this.degree = length - 1;
         }
 
+        /// <summary>
+        /// Ctor for initializing polinomial by 1 arguments
+        /// </summary>
+        /// <param name="degree">degree of polinomial</param>
         public Polinomial(int degree)
         {
             if (degree < 0)
@@ -44,22 +60,39 @@ namespace PolinomialExtension
             this.coefs = arr.ToArray();
         }
 
+        /// <summary>
+        /// Ctor for initializing polinomial by default value
+        /// </summary>
         public Polinomial()
         {
             this.coefs = new double[]{1, 1, 1};
             this.degree = 2;
         }
 
+        /// <summary>
+        /// method for getting coefficients of polinomial
+        /// </summary>
+        /// <returns>array of coef</returns>
         public double[] getCoef()
         {
             return coefs;
         }
 
+        /// <summary>
+        /// method for getting degree of polinomial
+        /// </summary>
+        /// <returns>degree of polinomial</returns>
         public int getDegree()
         {
             return degree;
         }
 
+        /// <summary>
+        /// Overriding method Equals of 2 object
+        /// </summary>
+        /// <param name="obj">object whith which compare</param>
+        /// <returns>bool value of equity of polinomials</returns>
+        /// <exception cref="ArgumentNullException">if the object null</exception>
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -72,6 +105,10 @@ namespace PolinomialExtension
             return this == polin;
         }
 
+        /// <summary>
+        /// Overriding method GetHashCode of  object
+        /// </summary>
+        /// <returns>hash code of object</returns>
         public override int GetHashCode()
         {
             int hashCode = 0;
@@ -82,6 +119,12 @@ namespace PolinomialExtension
             return hashCode;
         }
 
+        /// <summary>
+        /// overloading operator + for normal addition of 2 polinomial
+        /// </summary>
+        /// <param name="p1">first polinomial in sum</param>
+        /// <param name="p2">second polinomial in sum</param>
+        /// <returns>Sum Polinomial</returns>
         public static Polinomial operator +(Polinomial p1, Polinomial p2)
         {
             List<double> newCoef = new List<double>();
@@ -114,6 +157,12 @@ namespace PolinomialExtension
             return newPol;
         }
 
+        /// <summary>
+        /// overloading operator - for normal subtraction of 2 polinomial
+        /// </summary>
+        /// <param name="p1">first polinomial in subtraction</param>
+        /// <param name="p2">second polinomial in subtraction</param>
+        /// <returns>Subtraction Polinomial</returns>
         public static Polinomial operator -(Polinomial p1, Polinomial p2)
         {
             List<double> newCoef = new List<double>();
@@ -146,6 +195,12 @@ namespace PolinomialExtension
             return newPol;
         }
 
+        /// <summary>
+        /// overloading operator * for normal multiplying of 2 polinomial
+        /// </summary>
+        /// <param name="p1">first polinomial in multiplying</param>
+        /// <param name="p2">second polinomial in multiplying</param>
+        /// <returns>multiplying Polinomial</returns>
         public static Polinomial operator *(Polinomial p1, Polinomial p2)
         {
             int maxDegree = p1.getDegree() + p2.getDegree();
@@ -164,6 +219,12 @@ namespace PolinomialExtension
             return p3;
         }
 
+        /// <summary>
+        /// overloading operator != for compare unequity of 2 2 polinomial
+        /// </summary>
+        /// <param name="p1">first polinomial in comparing</param>
+        /// <param name="p2">second polinomial in comparing</param>
+        /// <returns>bool value of the unequity</returns>
         public static bool operator !=(Polinomial p1, Polinomial p2)
         {
             if (p1.getDegree() == p2.getDegree())
@@ -184,6 +245,12 @@ namespace PolinomialExtension
             }
         }
 
+        /// <summary>
+        /// overloading operator == for compare equity of 2 2 polinomial
+        /// </summary>
+        /// <param name="p1">first polinomial in comparing</param>
+        /// <param name="p2">second polinomial in comparing</param>
+        /// <returns>bool value of the equity</returns>
         public static bool operator ==(Polinomial p1, Polinomial p2)
         {
             if (p1.getDegree() == p2.getDegree())
@@ -204,6 +271,10 @@ namespace PolinomialExtension
             }
         }
 
+        /// <summary>
+        /// Overriding method for convert polinomial to string
+        /// </summary>
+        /// <returns>string presentation of polinomial</returns>
         public override string ToString()
         {
             StringBuilder polinom = new StringBuilder();
@@ -243,6 +314,9 @@ namespace PolinomialExtension
             return polinom.ToString();
         }
 
+        #endregion
+
+        #region Private
         private void IsValid(double[] coefs, int degree = 1)
         {
             if(coefs == null)
@@ -255,5 +329,6 @@ namespace PolinomialExtension
                 throw new ArgumentException(nameof(degree));
             }
         }
+        #endregion
     }
 }
