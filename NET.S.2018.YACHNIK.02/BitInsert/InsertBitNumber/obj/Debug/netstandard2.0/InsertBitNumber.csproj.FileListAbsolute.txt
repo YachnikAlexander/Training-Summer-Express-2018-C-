@@ -1,9 +1,0 @@
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\bin\Debug\netstandard2.0\InsertBitNumber.deps.json
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\bin\Debug\netstandard2.0\InsertBitNumber.dll
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\bin\Debug\netstandard2.0\InsertBitNumber.pdb
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.csprojResolveAssemblyReference.cache
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.csproj.CoreCompileInputs.cache
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.AssemblyInfoInputs.cache
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.AssemblyInfo.cs
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.dll
-C:\Users\Саша\Desktop\Training-Summer-Express-2018-C-\NET.S.2018.YACHNIK.02\BitInsert\InsertBitNumber\obj\Debug\netstandard2.0\InsertBitNumber.pdb
