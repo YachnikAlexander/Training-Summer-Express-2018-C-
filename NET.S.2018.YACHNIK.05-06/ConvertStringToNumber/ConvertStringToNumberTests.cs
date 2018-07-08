@@ -13,6 +13,8 @@ namespace ConvertStringTests
         [TestCase("1ACB67", 16, ExpectedResult = 1756007)]
         [TestCase("764241", 8, ExpectedResult = 256161)]
         [TestCase("10", 5, ExpectedResult = 5)]
+        
+
 
         [Test]
         public int ConvertStringToNumberTest(string number, int _base)
@@ -29,6 +31,10 @@ namespace ConvertStringTests
         }
 
         [TestCase("11111111111111111111111111111111", 2)]
+        [TestCase("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 16)]
+        [TestCase("777777777777777777777777777", 8)]
+        [TestCase("BBBBBBBBBBBBBBBBBB", 12)]
+
         public void Converting_OverflowException(string number, int _base)
         {
             Assert.Throws<OverflowException>(() => number.StringToInt(_base));

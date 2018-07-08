@@ -23,7 +23,7 @@ namespace ConvertStringToNumber
         /// <exception cref="ArgumentNullException">string argument is null</exception>
         /// <exception cref="ArgumentException">string argument is null</exception>
         /// <exception cref="ArgumentException">string argument is empty</exception>
-        /// <exception cref="OverflowException">string argument Length is more than MAX_STRING_LENGTH</exception>
+        /// <exception cref="OverflowException">string argument number is more that can store</exception>
         /// <exception cref="ArgumentException">base is less than 2 or more than 16</exception>
         /// <exception cref="ArgumentException">string argument contains incorrect symbols according to the base</exception>
         public static int StringToInt(this string numberStr, int _base)
@@ -39,10 +39,15 @@ namespace ConvertStringToNumber
         {
             int result = 0;
             for (int i = 0; i < numberStr.Length; i++)
-            {
+            { 
                 int number = NUMBERS.IndexOf(numberStr[i]);
 
                 int PowNeeded = (int)Math.Pow(_base, numberStr.Length - i - 1);
+
+                if(Int32.MaxValue - result < number * PowNeeded)
+                {
+                    throw new OverflowException(nameof(numberStr));
+                }
 
                 result += number * PowNeeded;
             }
