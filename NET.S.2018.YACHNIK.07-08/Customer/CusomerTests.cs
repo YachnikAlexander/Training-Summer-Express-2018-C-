@@ -16,7 +16,7 @@ namespace Customers.Tests
         {
             Customer temp = new Customer(name, revenue, contactPhone);
 
-            return temp.ToString("Name_Revenue_ContactPhone");
+            return temp.ToString("Name_Revenue_ContactPhone", new CustomProvider());
         }
 
         [TestCase("Sasha Yachnik", 100000, "8578399", ExpectedResult = "Sasha Yachnik,100000")]

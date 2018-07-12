@@ -107,21 +107,22 @@ namespace CustomeFormat
             format = format.Trim();
             if (provider == null)
             {
-                provider = NumberFormatInfo.CurrentInfo ;
+                provider = NumberFormatInfo.CurrentInfo;
             }
+            
 
             switch (format)
             {
                 case "Name":
                     return this.Name.ToString(provider);
                 case "Revenue":
-                    return String.Format("{0,8:F}", this.Revenue).ToString(provider);
+                    return String.Format(provider, "{0,8:F}", this.Revenue);
                 case "ContactPhone":
                     return this.ContactPhone.ToString(provider);
                 case "Name_Revenue_ContactPhone": 
                     return "Name_Revenue_ContactPhone:"
                         + this.Name.ToString(provider)+","
-                        + String.Format("{0,8:F}",this.Revenue).ToString(provider) + ","
+                        + String.Format(provider,"{0,8:F}",this.Revenue) + ","
                         + this.ContactPhone.ToString(provider);
                 case "Name_Revenue":
                     return this.Name.ToString(provider) + "," + this.Revenue.ToString(provider);
@@ -139,5 +140,48 @@ namespace CustomeFormat
             return Regex.IsMatch(contactPhone, @"^(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$", RegexOptions.IgnoreCase);
         }
         #endregion
+    }
+
+    public class CustomProvider : IFormatProvider, ICustomFormatter
+    {
+
+        IFormatProvider _parent;
+
+        public CustomProvider() : 
+            this (CultureInfo.CurrentCulture){ }
+
+        public CustomProvider(IFormatProvider parent)
+        {
+            _parent = parent;
+        }
+
+        public object GetFormat(Type formatType)
+        {
+            if (formatType == typeof(ICustomFormatter)) return this;
+            return null;
+        }
+
+        public string Format(string format, object arg, IFormatProvider prov)
+        {
+            // If it's not our format string, defer to the parent provider:
+            if (arg == null || format != "Q")
+            {
+                return string.Format(_parent, "{0:" + format + "}", arg);
+            }
+
+            arg = arg as Customer;
+
+            string data = string.Format(CultureInfo.InvariantCulture, "{0}", arg);
+            string result = "";
+            switch (format)
+            {
+                case "Name_Name":
+                    result = string.Format(format, data); break;      
+            }
+
+            return result;
+
+
+        }
     }
 }
