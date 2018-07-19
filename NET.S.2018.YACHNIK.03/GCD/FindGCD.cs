@@ -13,6 +13,58 @@ namespace FindGCD
     public class FindGCD
     {
         #region PublicApi
+        /// <summary>
+        /// Public Method for finding Gcd for 2 element by delegate
+        /// </summary>
+        /// <param name="firstNumber">first number needed to calculate gcd</param>
+        /// <param name="secondNumber">second number needed to calculate gcd</param>
+        /// <param name="solver">delegate for type of finding</param>
+        /// <returns>gcd of numbers</returns>
+        public static int FindGcdByDelegate(int firstNumber, int secondNumber, Func<int, int, int> solver)
+        {
+            if (СheckData(firstNumber, secondNumber))
+            {
+                int gcd = solver.Invoke(firstNumber, secondNumber);
+
+                return gcd;
+            }
+            else
+            {
+                if (firstNumber != 0)
+                {
+                    return firstNumber;
+                }
+
+                if (secondNumber != 0)
+                {
+                    return secondNumber;
+                }
+
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Public Method for finding Gcd for 2 element by delegate
+        /// </summary>
+        /// <param name="TimeWorking">out parametr storing the timr of working methods</param>
+        /// <param name="firstNumber">first number needed to calculate gcd</param>
+        /// <param name="secondNumber">second number needed to calculate gcd</param>
+        /// <param name="solver">delegate for type of finding</param>
+        /// <returns>gcd of numbers</returns>
+        public static int FindTimeByDelegate(out TimeSpan TimeWorking, int firstNumber, int secondNumber, Func<int, int, int> solver)
+        {
+            Stopwatch Time = new Stopwatch();
+            Time.Start();
+
+            int gcd = solver.Invoke(firstNumber, secondNumber);
+
+            Time.Stop();
+
+            TimeWorking = Time.Elapsed;
+            return gcd;
+        }
+
 
         /// <summary>
         /// public method for finding GCD of 2 numbers by Euclid method
@@ -107,6 +159,19 @@ namespace FindGCD
         /// <returns>Gcd of numbers</returns>
         public static int FindSteinGCD(params int[] numbers)
         {
+            int gcd = StartFindSteinGCD(numbers);
+            return gcd;
+        }
+
+        /// <summary>
+        /// public method for finding GCD of 2 numbers by Stein method
+        /// </summary>
+        /// <param name="firstNumber">first number of which must to find Gcd</param>
+        /// <param name="secondNumber">second number of which must to find Gcd</param>
+        /// <returns>Gcd of numbers</returns>
+        public static int FindSteinGCD(int firstNumber, int secondNumber)
+        {
+            int[] numbers = new int[] { firstNumber, secondNumber };
             int gcd = StartFindSteinGCD(numbers);
             return gcd;
         }

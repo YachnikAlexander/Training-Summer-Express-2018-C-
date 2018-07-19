@@ -194,5 +194,33 @@ namespace FindGCD.Test
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Delegate_SteinGCD_minus10_minus14_minus20()
+        {
+            int firstNumber = 24;
+            int secondNumber = 16;
+            int expected = 8;
+
+            Func<int, int, int> solver = new Func<int, int, int>(FindGCD.FindSteinGCD);
+
+            int actual = FindGCD.FindGcdByDelegate(firstNumber, secondNumber, solver);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Delegate_EuclidGCD_minus10_minus14_minus20()
+        {
+            int firstNumber = 24;
+            int secondNumber = 16;
+            int expected = 8;
+
+            Func<int, int, int> solver = new Func<int, int, int>(FindGCD.FindEuclidGCD);
+
+            int actual = FindGCD.FindGcdByDelegate(firstNumber, secondNumber, solver);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
