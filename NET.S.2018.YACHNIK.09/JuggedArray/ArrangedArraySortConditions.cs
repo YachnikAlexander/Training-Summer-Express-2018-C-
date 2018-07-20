@@ -9,7 +9,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating increasing sum
     /// </summary>
-    public class IncreasingSum : ICompare<int>
+    public class IncreasingSum : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
@@ -38,7 +38,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating decreasing sum
     /// </summary>
-    public class DecreasingSum : ICompare<int>
+    public class DecreasingSum : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
@@ -67,7 +67,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating increasing max element sum
     /// </summary>
-    public class IncreasingMaxElement : ICompare<int>
+    public class IncreasingMaxElement : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
@@ -96,7 +96,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating decreasing max element sum
     /// </summary>
-    public class DecreasingMaxElement : ICompare<int>
+    public class DecreasingMaxElement : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
@@ -125,7 +125,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating increasing Min element sum
     /// </summary>
-    public class IncreasingMinElement : ICompare<int>
+    public class IncreasingMinElement : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
@@ -154,7 +154,7 @@ namespace ArrangedArray
     /// <summary>
     /// class for calculating decreasingMinElement sum
     /// </summary>
-    public class DecreasingMinElement : ICompare<int>
+    public class DecreasingMinElement : IComparer<int[]>
     {
         /// <summary>
         /// Method for comparing 
