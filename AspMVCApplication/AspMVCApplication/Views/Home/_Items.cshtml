@@ -1,0 +1,10 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList< AspMVCApplication.Models.Photo>
+
+@foreach (var item in Model)
+{
+    <a href="@item.ImagePath" title="@item.Description" data-gallery>
+        <img src="@item.ThumbPath" alt="@item.Description" class="img-rounded" style="margin-bottom:7px;" />
+    </a>
+}
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

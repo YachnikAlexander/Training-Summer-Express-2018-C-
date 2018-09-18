@@ -1,0 +1,6 @@
+C:\Users\Александр\Desktop\Matrices\Matrices\bin\Debug\Matrices.dll
+C:\Users\Александр\Desktop\Matrices\Matrices\bin\Debug\Matrices.pdb
+C:\Users\Александр\Desktop\Matrices\Matrices\obj\Debug\Matrices.csprojAssemblyReference.cache
+C:\Users\Александр\Desktop\Matrices\Matrices\obj\Debug\Matrices.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Desktop\Matrices\Matrices\obj\Debug\Matrices.dll
+C:\Users\Александр\Desktop\Matrices\Matrices\obj\Debug\Matrices.pdb
